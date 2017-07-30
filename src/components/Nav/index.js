@@ -19,6 +19,9 @@ const Navigation = props => {
             <LinkContainer to='/' exact>
               <NavItem>Home</NavItem>
             </LinkContainer>
+            <LinkContainer to='/async' exact>
+              <NavItem>Async</NavItem>
+            </LinkContainer>
             <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>

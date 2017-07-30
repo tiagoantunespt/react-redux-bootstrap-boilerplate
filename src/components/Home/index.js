@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { increment, fetchInfo } from '../../actions'
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron, Button } from 'react-bootstrap'
 
 const Home = props => (
   <div className='container'>
