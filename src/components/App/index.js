@@ -1,17 +1,22 @@
-import React, { Component } from 'react'
-import { Jumbotron, Button } from 'react-bootstrap';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom'
+import Home from '../Home'
+import Nav from '../Nav'
 
-class App extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <Jumbotron>
-          <h1>About</h1>
-          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        </Jumbotron>
-      </div>
-    )
-  }
-}
+const notFound = () => <div className='container'>Not Found</div>
+
+const App = () => (
+  <div>
+    <header className='header'>
+      <Nav />
+    </header>
+    <main>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={notFound} />
+      </Switch>
+    </main>
+  </div>
+)
 
 export default App
